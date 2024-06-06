@@ -1,0 +1,41 @@
+
+This is the source code package of ConvertLIT 1.8
+
+In this version, most of the outstanding bug reports should be resolved:
+  - Cope with buggy generators which write out truncated files 
+  - Added dictionary support (disable with -d flag) 
+  - Handle duplicated filenames 
+  - Completely changed whitespace expansion 
+    (Thanks to all the help from people who reported this problem)
+  - Fixed very rare LZX Decompression buffer overruns 
+  - Should work on MAC OS/X and other big endian hardware
+    (If not, send a bug report)
+  - Better non-english filename support 
+
+DRM5 support is enhanced in this version
+
+  DRM5 support is now implemented through a "keys.txt" file which should 
+  contain the private keys from your activation components.  You create this
+  file once with "ReaderKeyRecoveryTool.exe" from the Windows binary package
+  and from then on you can use those keys under any environment.
+
+Build changes:
+
+This package now requires "LIBTOMMATH" from math.libtomcrypt.org
+
+To build under Linux:
+	cd lib
+	make
+	cd ../clit16
+	make
+
+To build under Windows, Visual C*.
+	cd lib
+	nmake -f win32.mak
+	cd ..\clit16
+	nmake -f win32.mak
+
+Now that VC++ 7 is available for "free", supporting MINGW is left as an 
+exercise for the interested reader.  Note that getting the free VC++ to the 
+point where it can compile ConvertLIT isn't trivial and no support 
+will be provided.
