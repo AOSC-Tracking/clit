@@ -1,6 +1,6 @@
 all: clit
 
-CFLAGS=-funsigned-char -Wall -O2 -I /usr/lib/ -I ../lib -I ../lib/des -I .
+CFLAGS := $(CFLAGS) -funsigned-char -Wall -O2 -I /usr/lib/ -I ../lib -I ../lib/des -I .
 clean:
 	rm -f *.o clit
 

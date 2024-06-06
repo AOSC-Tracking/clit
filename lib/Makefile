@@ -1,6 +1,6 @@
 all: openclit.a
 
-CFLAGS=-O3 -Wall -Ides -Isha -Inewlzx -I.
+CFLAGS := $(CFLAGS) -O3 -Wall -Ides -Isha -Inewlzx -I.
 clean:
 	rm -f *.o openclit.a des/*.o lzx/*.o sha/*.o
 
